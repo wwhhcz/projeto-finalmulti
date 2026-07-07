@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Radar da Barra · Barra do Ceará</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo__marca">
+    <a href="index.html" class="marca">
+      <span class="marca__onda" aria-hidden="true">〜</span>
+      <span class="marca__texto">Radar <strong>da Barra</strong></span>
+    </a>
+    <span class="topo__selo">Barra do Ceará · Fortaleza-CE</span>
+  </div>
+
+  <nav class="topo__nav" aria-label="Navegação principal">
+    <a href="precos.html">Preços</a>
+    <a href="mercados.html">Mercados</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="finalidade.html">Finalidade</a>
+    <a href="reportar.html" class="botao botao--sol">Reportar preço</a>
+  </nav>
+
+  <button class="topo__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" hidden>
+  <a href="precos.html">Preços</a>
+  <a href="mercados.html">Mercados</a>
+  <a href="tutorial.html">Tutorial</a>
+  <a href="finalidade.html">Finalidade</a>
+  <a href="reportar.html">Reportar preço</a>
+  <a href="totem.html">Modo totem</a>
+</nav>
+
+<div class="ticker" role="marquee" aria-label="Últimas variações de preço">
+  <div class="ticker__trilho" id="tickerTrilho"></div>
+</div>
+
+<div id="totemVoltarBarra" class="totem-voltar-barra" hidden>
+  <a href="totem.html" data-manter-sem-totem>← Voltar ao início do totem</a>
+</div>
+
+<main id="conteudo">
+
+<section class="hero">
+  <div class="hero__texto">
+    <span class="eyebrow">Atualizado em <span id="hoje"></span></span>
+    <h1>De olho no preço<br>da sua feira.</h1>
+    <p class="hero__lead">
+      O Radar da Barra acompanha, mercado por mercado, o que sobe e o que
+      desce na Barra do Ceará — pra você decidir onde comprar antes de sair
+      de casa, e pra fortalecer a fiscalização coletiva do bairro.
+    </p>
+    <div class="hero__acoes">
+      <a href="precos.html" class="botao botao--sol">Ver preços de hoje</a>
+      <a href="reportar.html" class="botao botao--fantasma">Reportar um preço</a>
+    </div>
+  </div>
+
+  <div class="hero__cartao" aria-hidden="true">
+    <span class="hero__cartao-rotulo">Índice da cesta — hoje</span>
+    <span class="hero__cartao-valor" id="indiceValor">0%</span>
+    <span class="hero__cartao-legenda">variação média nos 5 mercados monitorados</span>
+    <div class="hero__cartao-linha"></div>
+    <div class="hero__cartao-stats">
+      <div><b id="totalAumentos">0</b><span>produtos subiram</span></div>
+      <div><b id="totalReducoes">0</b><span>produtos baixaram</span></div>
+      <div><b id="totalMercados">0</b><span>mercados no radar</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="secao__cabecalho">
+    <h2>Maiores movimentos de hoje</h2>
+    <a href="precos.html" class="link-ver-mais">Ver todos os preços →</a>
+  </div>
+  <div class="grade-destaques" id="destaques"></div>
+</section>
+
+<section class="secao secao--faixa">
+  <div class="faixa">
+    <div class="faixa__item">
+      <span class="faixa__numero">15</span>
+      <span>mercados mapeados, de mercadinhos de bairro a grandes redes</span>
+    </div>
+    <div class="faixa__item">
+      <span class="faixa__numero">100%</span>
+      <span>colaborativo — qualquer morador pode reportar um preço</span>
+    </div>
+    <div class="faixa__item">
+      <span class="faixa__numero">1</span>
+      <span>bairro, a Barra do Ceará, de olho nos próprios preços</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="rodape__grade">
+    <div class="rodape__coluna">
+      <span class="marca marca--rodape">
+        <span class="marca__onda" aria-hidden="true">〜</span>
+        <span class="marca__texto">Radar <strong>da Barra</strong></span>
+      </span>
+      <p>Projeto final de curso — monitoramento colaborativo de preços dos mercados da Barra do Ceará, Fortaleza-CE.</p>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Navegar</h3>
+      <a href="precos.html">Preços</a>
+      <a href="mercados.html">Mercados</a>
+      <a href="reportar.html">Reportar preço</a>
+      <a href="totem.html">Modo totem</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Sobre o projeto</h3>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="finalidade.html">Finalidade</a>
+      <a href="termos.html">Termos de uso</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Mercados parceiros</h3>
+      <p class="rodape__nota">13 mercados da Barra do Ceará, do mercadinho de esquina às grandes redes.</p>
+    </div>
+  </div>
+  <div class="rodape__base">
+    <span>© 2026 Radar da Barra · projeto acadêmico sem fins comerciais</span>
+    <a href="termos.html">Termos de uso</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/paginas.js"></script>
+<script>renderIndex();</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Mercados Monitorados · Radar da Barra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .cartao-mercado { background: var(--cor-branco); padding: 2rem; border: 2px solid #eaeaea; border-radius: 8px; display: flex; flex-direction: column; gap: 0.5rem; transition: transform 0.2s, border-color 0.2s; }
+  .cartao-mercado:hover { transform: translateY(-3px); border-color: var(--cor-texto); }
+  .cartao-mercado h3 { font-family: var(--fonte-titulo); font-size: 1.4rem; color: var(--cor-texto); }
+  .mercado-tipo { font-family: var(--fonte-mono); font-size: 0.75rem; text-transform: uppercase; color: #666; font-weight: 700; background: #eee; padding: 0.2rem 0.6rem; border-radius: 4px; align-self: flex-start; }
+  .mercado-endereco { font-size: 0.9rem; color: #555; margin-top: 0.5rem; }
+  .mercado-status { font-size: 0.85rem; font-weight: 600; color: var(--cor-reducao); display: flex; align-items: center; gap: 0.25rem; margin-top: auto; padding-top: 1rem; border-top: 1px dashed #ddd; }
+</style>
+</head>
+<body>
+
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo__marca">
+    <a href="index.html" class="marca">
+      <span class="marca__onda" aria-hidden="true">〜</span>
+      <span class="marca__texto">Radar <strong>da Barra</strong></span>
+    </a>
+    <span class="topo__selo">Barra do Ceará · Fortaleza-CE</span>
+  </div>
+
+  <nav class="topo__nav" aria-label="Navegação principal">
+    <a href="precos.html">Preços</a>
+    <a href="mercados.html">Mercados</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="finalidade.html">Finalidade</a>
+    <a href="reportar.html" class="botao botao--sol">Reportar preço</a>
+  </nav>
+
+  <button class="topo__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" hidden>
+  <a href="precos.html">Preços</a>
+  <a href="mercados.html">Mercados</a>
+  <a href="tutorial.html">Tutorial</a>
+  <a href="finalidade.html">Finalidade</a>
+  <a href="reportar.html">Reportar preço</a>
+  <a href="totem.html">Modo totem</a>
+</nav>
+
+<div class="ticker" role="marquee" aria-label="Últimas variações de preço">
+  <div class="ticker__trilho" id="tickerTrilho"></div>
+</div>
+
+<main id="conteudo">
+  <section class="cabecalho-pagina">
+    <span class="eyebrow">Rede de Monitoramento</span>
+    <h1>Mercados no Radar</h1>
+    <p>Encontre os 15 estabelecimentos mapeados pelo projeto na Barra do Ceará e arredores para comparar antes de sair de casa.</p>
+  </section>
+
+  <section class="secao" style="padding-top: 0;">
+    <div class="grade-destaques">
+      
+      <!-- 1 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Supermercado</span>
+        <h3>Supermercado do Povo</h3>
+        <p class="mercado-endereco">Av. Coronel Carvalho, 2100</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 2 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Comercial</span>
+        <h3>Comercial São José</h3>
+        <p class="mercado-endereco">Rua dos Pacajús, 450</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 3 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Atacarejo</span>
+        <h3>Atacadão da Barra</h3>
+        <p class="mercado-endereco">Av. Pres. Castelo Branco (Leste-Oeste), 5200</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 4 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Rede de Bairro</span>
+        <h3>Rede Baratão</h3>
+        <p class="mercado-endereco">Av. Radialista João Ramos, 120</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 5 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Mercadinho</span>
+        <h3>Mercadinho São Francisco</h3>
+        <p class="mercado-endereco">Rua Central, 89</p>
+        <span class="mercado-status">● Atualizado há 1 dia</span>
+      </article>
+
+      <!-- 6 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Mercadinho</span>
+        <h3>Mercadinho da Esquina</h3>
+        <p class="mercado-endereco">Rua José Roberto, 715</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 7 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Hortifruti</span>
+        <h3>Hortifruti da Praça</h3>
+        <p class="mercado-endereco">Praça de Santiago, S/N</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 8 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Açougue</span>
+        <h3>Açougue Central da Barra</h3>
+        <p class="mercado-endereco">Rua Tulipa, 310</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 9 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Padaria</span>
+        <h3>Padaria Pão de Ouro</h3>
+        <p class="mercado-endereco">Rua Radialista José Célio, 55</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+      <!-- 10 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Grande Rede</span>
+        <h3>Center Box Supermercados</h3>
+        <p class="mercado-endereco">Av. Coronel Carvalho, 1330</p>
+        <span class="mercado-status">● Atualizado há 2 dias</span>
+      </article>
+
+      <!-- 11 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Mercadinho</span>
+        <h3>Mercadinho Vila do Mar</h3>
+        <p class="mercado-endereco">Av. Radialista João Ramos, 840</p>
+        <span class="mercado-status">● Atualizado há 1 dia</span>
+      </article>
+
+      <!-- 12 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Comercial</span>
+        <h3>Comercial Oliveira</h3>
+        <p class="mercado-endereco">Rua Dr. Hugo Rocha, 112</p>
+        <span class="mercado-status">● Atualizado há 3 dias</span>
+      </article>
+
+      <!-- 13 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Supermercado</span>
+        <h3>Supermercado Compre Max</h3>
+        <p class="mercado-endereco">Rua Costa Matos, 502</p>
+        <span class="mercado-status">● Atualizado há 1 dia</span>
+      </article>
+
+      <!-- 14 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Mercadinho</span>
+        <h3>Mercadinho Três Irmãos</h3>
+        <p class="mercado-endereco">Rua Almirante Tamandaré, 93</p>
+        <span class="mercado-status">● Atualizado há 1 dia</span>
+      </article>
+
+      <!-- 15 -->
+      <article class="cartao-mercado">
+        <span class="mercado-tipo">Grande Rede</span>
+        <h3>Frangolândia Supermercados</h3>
+        <p class="mercado-endereco">Av. Sargento Hermínio Sampaio, 3455 (Arredores)</p>
+        <span class="mercado-status">● Preços atualizados hoje</span>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape__grade">
+    <div class="rodape__coluna">
+      <span class="marca marca--rodape">
+        <span class="marca__onda" aria-hidden="true">〜</span>
+        <span class="marca__texto">Radar <strong>da Barra</strong></span>
+      </span>
+      <p>Projeto final de curso — monitoramento colaborativo de preços dos mercados da Barra do Ceará, Fortaleza-CE.</p>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Navegar</h3>
+      <a href="precos.html">Preços</a>
+      <a href="mercados.html">Mercados</a>
+      <a href="reportar.html">Reportar preço</a>
+      <a href="totem.html">Modo totem</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Sobre o projeto</h3>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="finalidade.html">Finalidade</a>
+      <a href="termos.html">Termos de uso</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Mercados parceiros</h3>
+      <p class="rodape__nota">15 mercados da Barra do Ceará, do mercadinho de esquina às grandes redes.</p>
+    </div>
+  </div>
+  <div class="rodape__base">
+    <span>© 2026 Radar da Barra · projeto acadêmico sem fins comerciais</span>
+    <a href="termos.html">Termos de uso</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/paginas.js"></script>
+</body>
+</html>

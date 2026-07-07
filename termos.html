@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Termos de Uso · Radar da Barra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo__marca">
+    <a href="index.html" class="marca">
+      <span class="marca__onda" aria-hidden="true">〜</span>
+      <span class="marca__texto">Radar <strong>da Barra</strong></span>
+    </a>
+    <span class="topo__selo">Barra do Ceará · Fortaleza-CE</span>
+  </div>
+
+  <nav class="topo__nav" aria-label="Navegação principal">
+    <a href="precos.html">Preços</a>
+    <a href="mercados.html">Mercados</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="finalidade.html">Finalidade</a>
+    <a href="reportar.html" class="botao botao--sol">Reportar preço</a>
+  </nav>
+
+  <button class="topo__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" hidden>
+  <a href="precos.html">Preços</a>
+  <a href="mercados.html">Mercados</a>
+  <a href="tutorial.html">Tutorial</a>
+  <a href="finalidade.html">Finalidade</a>
+  <a href="reportar.html">Reportar preço</a>
+  <a href="totem.html">Modo totem</a>
+</nav>
+
+<div class="ticker" role="marquee" aria-label="Últimas variações de preço">
+  <div class="ticker__trilho" id="tickerTrilho"></div>
+</div>
+
+<main id="conteudo">
+  <section class="cabecalho-pagina">
+    <span class="eyebrow">Regras da Comunidade</span>
+    <h1>Termos de Uso</h1>
+  </section>
+
+  <section class="secao" style="max-width: 800px; margin: 0 auto; padding-top: 0;">
+    <h3>1. Natureza do Projeto</h3>
+    <p>O <strong>Radar da Barra</strong> é um projeto estritamente acadêmico, sem fins lucrativos ou comerciais, criado exclusivamente para fins de estudo e utilidade pública para os moradores da Barra do Ceará.</p>
+    <br>
+    <h3>2. Precisão das Informações</h3>
+    <p>Os valores exibidos baseiam-se em colaborações da comunidade. Embora a moderação valide os envios, os preços de mercado flutuam rapidamente. Portanto, o site serve como base informativa e **não garante contratualmente** o valor na etiqueta no momento da compra.</p>
+    <br>
+    <h3>3. Uso Colaborativo</h3>
+    <p>Ao enviar relatórios através do "Reportar Preço", o usuário declara estar preenchendo valores reais capturados diretamente nas prateleiras locais. Tentativas de manipulação de dados intencionais resultarão no descarte permanente do envio.</p>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape__grade">
+    <div class="rodape__coluna">
+      <span class="marca marca--rodape">
+        <span class="marca__onda" aria-hidden="true">〜</span>
+        <span class="marca__texto">Radar <strong>da Barra</strong></span>
+      </span>
+      <p>Projeto final de curso — monitoramento colaborativo de preços dos mercados da Barra do Ceará, Fortaleza-CE.</p>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Navegar</h3>
+      <a href="precos.html">Preços</a>
+      <a href="mercados.html">Mercados</a>
+      <a href="reportar.html">Reportar preço</a>
+      <a href="totem.html">Modo totem</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Sobre o projeto</h3>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="finalidade.html">Finalidade</a>
+      <a href="termos.html">Termos de uso</a>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Mercados parceiros</h3>
+      <p class="rodape__nota">13 mercados da Barra do Ceará, do mercadinho de esquina às grandes redes.</p>
+    </div>
+  </div>
+  <div class="rodape__base">
+    <span>© 2026 Radar da Barra · projeto acadêmico sem fins comerciais</span>
+    <a href="termos.html">Termos de uso</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/paginas.js"></script>
+</body>
+</html>
