@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Você aceita?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    #btn-sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #btn-nao {
+      background-color: #f44336;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Amor me perdoa? não sabia o significado de HOE... e o BK não foi na intenção ruim...?</h2>
+
+  <div class="container">
+    <button id="btn-sim" onclick="aceitou()">Sim</button>
+    <button id="btn-nao">Não</button>
+  </div>
+
+  <script>
+    const btnNao = document.getElementById('btn-nao');
+
+    // Mudar de posição ao passar o mouse ou tentar clicar
+    btnNao.addEventListener('mouseover', fugir);
+    btnNao.addEventListener('touchstart', fugir); // Suporte para telas sensíveis ao toque
+
+    function fugir() {
+      // Gera posições aleatórias na tela
+      const x = Math.random() * (window.innerWidth - btnNao.offsetWidth - 100);
+      const y = Math.random() * (window.innerHeight - btnNao.offsetHeight - 100);
+
+      btnNao.style.position = 'fixed';
+      btnNao.style.left = `${x}px`;
+      btnNao.style.top = `${y}px`;
+    }
+
+    function aceitou() {
+      // Redireciona para The Hills - The Weeknd no YouTube Music
+      window.location.href = "https://www.youtube.com/watch?v=yzTuBuRdAyA&list=RDyzTuBuRdAyA&start_radio=1&pp=ygUadGUgbGlnYXJlaSA1OjMwIHRoZSB3ZWVrbmSgBwE%3D";
+    }
+  </script>
+
+</body>
+</html>
